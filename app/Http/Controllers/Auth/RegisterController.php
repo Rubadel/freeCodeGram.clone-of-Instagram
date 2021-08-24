@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\View\View;
 use Intervention\Image\Facades\Image;
 
 use App\Http\Controllers\Controller;
@@ -74,5 +75,6 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'password' => Hash::make($data['password']),
         ]);
+
     }
 }

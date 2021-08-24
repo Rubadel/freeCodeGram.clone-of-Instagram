@@ -30,6 +30,7 @@ class PostController extends Controller
         $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
 
         return view('posts.index', compact('posts'));
+
     }
 
     public function create()
@@ -49,8 +50,10 @@ class PostController extends Controller
         //This lines for customize the image size put, i have a problem with version in my own device,
         // so i will fit it in css
 
-//        $image = Image::make(public_path("/storage/{$imagePath}"))->fit(1200, 1200);
-//        $image->save();
+        //Okay the problem solved!
+
+        $image = Image::make(public_path("/storage/{$imagePath}"))->fit(350, 350);
+        $image->save();
 
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
@@ -60,8 +63,10 @@ class PostController extends Controller
         return redirect('/profile/' . auth()->user()->id);
     }
 
+
     public function show(Post $post)
     {
         return view('posts.show', compact('post'));
     }
+
 }
