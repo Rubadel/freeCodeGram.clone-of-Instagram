@@ -32,10 +32,10 @@
                        </a>
                    </span>
                    {{$post->caption}}
-                   <br>
-                   <br>
-                   <br>
-                   There are not any comment yet!
+{{--                   <br>--}}
+{{--                   <br>--}}
+{{--                   <br>--}}
+{{--                   There are not any comment yet!--}}
                </p>
            </div>
        </div>
