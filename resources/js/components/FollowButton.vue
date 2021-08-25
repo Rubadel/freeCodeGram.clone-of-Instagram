@@ -14,15 +14,15 @@
 
 <!-- for color change when button clicked "follow" -->
 
-<!--<script>-->
-<!--export default {-->
-<!--    data: {-->
+<script>
+export default {
+    data: {
 
-<!--        clicked: false-->
-<!--    }-->
+        clicked: false
+    }
 
-<!--}-->
-<!--</script>-->
+}
+</script>
 
 <script>
     export default {
@@ -35,6 +35,13 @@
         data:function() {
             return {
                 status: this.follows,
+                clicked: this.follows,
+
+            }
+        },
+
+        follow:function() {
+            return {
                 clicked: this.follows,
             }
         },

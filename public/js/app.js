@@ -1870,6 +1870,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['userId', 'follows'],
   mounted: function mounted() {
@@ -1878,6 +1879,11 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       status: this.follows,
+      clicked: this.follows
+    };
+  },
+  follow: function follow() {
+    return {
       clicked: this.follows
     };
   },
@@ -1897,7 +1903,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     buttonText: function buttonText() {
-      return this.status ? 'Unfollow' : 'Follow'; // return (this.clicked) ? '#a11414' : '#1479a1';
+      return this.status ? 'Unfollow' : 'Follow';
     }
   }
 });
