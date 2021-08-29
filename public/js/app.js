@@ -1850,47 +1850,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  // props: {userId:String},
   props: ['userId', 'follows'],
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log('component mounted.');
   },
   data: function data() {
     return {
-      status: this.follows,
-      clicked: this.follows
-    };
-  },
-  follow: function follow() {
-    return {
-      clicked: this.follows
+      status: this.follows
     };
   },
   methods: {
     followUser: function followUser() {
       var _this = this;
 
+      // alert(this.userId)
       axios.post('/follow/' + this.userId).then(function (response) {
         _this.status = !_this.status;
         console.log(response.data);
@@ -37464,16 +37439,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("button", {
-      class: { "btn btn-primary": !_vm.clicked, "btn btn-light": _vm.clicked },
+      staticClass: "btn btn-primary ml-3",
       domProps: { textContent: _vm._s(_vm.buttonText) },
-      on: {
-        click: [
-          function($event) {
-            _vm.clicked = !_vm.clicked
-          },
-          _vm.followUser
-        ]
-      }
+      on: { click: _vm.followUser }
     })
   ])
 }
