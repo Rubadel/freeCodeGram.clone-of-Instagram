@@ -24,8 +24,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
-                    <div><img src="/svg/svg.jpg" style="height:20px; border-right:2px solid #f7c6c5 " alt="" class="pr-3"></div>
-                    <div class="pl-3 pt-1">freeCodeGram</div>
+                    <div><img src="/svg/logo.svg" style="height:20px; border-right:2px solid #0a0202 " alt="" class="pr-3"></div>
+                    <div class="pl-3 pt-1" style="border-color:  #050505">freeCodeGram</div>
 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
